@@ -1,0 +1,8 @@
+def reverse(x: int) -> int:
+
+    res = str(x)[::-1]
+    if res.endswith('-'):
+        res = ''.join(['-', res[:-1]])
+    if (int(res) + 1).bit_length() > 31:
+        return 0
+    return int(res)
